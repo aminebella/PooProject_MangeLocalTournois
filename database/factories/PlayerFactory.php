@@ -16,7 +16,7 @@ class PlayerFactory extends Factory
     public function definition(): array
     {
         return [
-            "fullname"=>$this->faker->name(),
+            "fullName"=>$this->faker->name(),
             "age"=>$this->faker->numberBetween(10,50),
             "number"=>$this->faker->numberBetween(1, 99),
             "position"=>$this->faker->randomElement(['Goalkeeper', 'Defender', 'Midfielder', 'Forward']),

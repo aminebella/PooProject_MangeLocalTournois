@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,4 +88,15 @@
     </section>
     
 </body>
-</html>
+</html> --}}
+@extends('admin.layouts.AdminStructure')
+
+@section('title', 'Accueil')
+
+@section('content')
+<div class="text-center">
+    <h1 class="display-4">Bienvenue dans l'application de Gestion de Tournoi</h1>
+    <p class="lead">Organisez vos tournois facilement et suivez vos équipes, matchs, et classements.</p>
+    <a href="{{ route('teams.index') }}" class="btn btn-primary">Commencer</a>
+</div>
+@endsection
