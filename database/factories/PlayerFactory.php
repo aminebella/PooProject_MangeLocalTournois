@@ -17,7 +17,7 @@ class PlayerFactory extends Factory
     {
         return [
             "fullname"=>$this->faker->name(),
-            "age"=>$this->faker->numberBetween(18,50),
+            "age"=>$this->faker->numberBetween(10,50),
             "number"=>$this->faker->numberBetween(1, 99),
             "position"=>$this->faker->randomElement(['Goalkeeper', 'Defender', 'Midfielder', 'Forward']),
             "nationality"=>$this->faker->country(),

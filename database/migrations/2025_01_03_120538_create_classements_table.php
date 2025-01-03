@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('classements', function (Blueprint $table) {
             $table->id();
             $table->foreignId('team_id')->constrained('teams')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('match_played')->default(0);
-            $table->integer('win')->default(0);
-            $table->integer('lose')->default(0);
-            $table->integer('tied')->default(0);
-            $table->integer('points')->default(0);
-            $table->integer('goals')->default(0);
+            $table->unsignedInteger('match_played')->default(0);
+            $table->unsignedInteger('win')->default(0);
+            $table->unsignedInteger('lose')->default(0);
+            $table->unsignedInteger('tied')->default(0);
+            $table->unsignedInteger('points')->default(0);
+            $table->unsignedInteger('goals')->default(0);
             $table->timestamps();
         });
     }

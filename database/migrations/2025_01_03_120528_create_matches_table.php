@@ -14,8 +14,8 @@ return new class extends Migration
             $table->foreignId('team2_id')->constrained('teams')->onDelete('cascade')->onUpdate('cascade');
             $table->datetime('kickoff_time')->unique();
             $table->enum('status', ['schedule', 'finished'])->default('schedule');
-            $table->integer('score_team1')->nullable();
-            $table->integer('score_team2')->nullable();
+            $table->unsignedInteger('score_team1')->nullable();
+            $table->unsignedInteger('score_team2')->nullable();
             $table->timestamps();
         });
     }
